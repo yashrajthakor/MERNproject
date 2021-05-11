@@ -22,3 +22,6 @@ Starting with NodeJS , framework is ExpressJS.
 	'mongodb+srv://username:password@cluster0.ckaho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 * npm i mongoose
 * Network access: Add IP address
+
+### npm i dotenv
+### creating mongoose : Schema , Model
