@@ -25,3 +25,7 @@ Starting with NodeJS , framework is ExpressJS.
 
 ### npm i dotenv
 ### creating mongoose : Schema , Model
+## Storing the data in the online database by Express and mongoose
+called post api from postman and fetch data on mongodb (totally handle from backend side)
+* using promises(then/catch)  
+* using async/await
