@@ -18,15 +18,15 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     password: {
-        type: Number,
+        type: String,
         required: true
     },
     cpassword: {
-        type: Number,
+        type: String,
         required: true
     },
 })
 
-const User = mongoose.Model('USER',userSchema);
+const User = mongoose.model('USER',userSchema);
 
 module.exports = User;
