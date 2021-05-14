@@ -35,3 +35,4 @@ password encrypted , and stored on database while register
 also bcyrpt.compare to manage on login flow
 
 ## User Authentication using JWT & Stored Token In Mongodb
+npm i jsonwebtoken
