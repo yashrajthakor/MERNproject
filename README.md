@@ -29,5 +29,11 @@ Starting with NodeJS , framework is ExpressJS.
 called post api from postman and fetch data on mongodb (totally handle from backend side)
 * using promises(then/catch)  
 * using async/await
+<<<<<<< HEAD
 
 ## User Authentication using JWT & Stored Token In Mongodb
+=======
+### npm i bcrypt.js
+password encrypted , and stored on database while register
+also bcyrpt.compare to manage on login flow
+>>>>>>> 3e665cef97685594a17685945b18640b608dd242
