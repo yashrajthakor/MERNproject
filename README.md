@@ -36,3 +36,10 @@ also bcyrpt.compare to manage on login flow
 
 ## User Authentication using JWT & Stored Token In Mongodb
 npm i jsonwebtoken
+
+## Client side (ReactJS project)
+* npx create-react-app client
+* npm i bootstrap
+* npm i react-router-dom
+* useState
+
