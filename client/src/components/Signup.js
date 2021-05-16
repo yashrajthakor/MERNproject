@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import './../App.css';
+import {useHistory} from 'react-router-dom';
 const Signup = () => {
+    const history = useHistory()
     const[user, setUser] = useState({
         name:"", email:"",phone:"", work:"", password:"", cpassword:"" 
     });
@@ -11,12 +12,38 @@ const Signup = () => {
         value = e.target.value;
         setUser({...user, [name]:value});
     }
+    const PostData= async(e)=>{
+        debugger
+        e.preventDefault();
+        const {name, email, phone, work, password, cpassword} = user;
+        debugger
+        const res =await fetch("/register", {
+            
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name, email, phone, work, password, cpassword
+            })
+        });
+        const data = await res.json();
+        if(data.status === 422 || !data){
+            window.alert("invalid registration");
+            console.log("invalid registration");
+        }else{
+            window.alert("successfully registration");
+            console.log("successfully registration");
+
+            history.push("/login");
+        }
+    }
     return (
     <>
         <div className="signup-form">
         <h5 className="center-align">Signup form</h5>
        {/*  <div className="card-body"> */}
-            <form>
+            <form method="POST">
             <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Name</label>
                     <input type="text" className="form-control" name="name" id="exampleInputname1"  aria-describedby="nameHelp" 
@@ -54,13 +81,16 @@ const Signup = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputcPassword1">Confirm Password</label>
-                    <input type="password" className="form-control" id="exampleInputcPassword1" 
+                    <input type="password" className="form-control" name="cpassword" id="exampleInputcPassword" 
                     value={user.cpassword}
                     onChange={handleInputs}
                     placeholder="confirm Password"/>
                 </div>
                
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary"
+                name="signup"
+                value="register" 
+                onClick={PostData}>Submit</button>
             </form>
 
   </div>
