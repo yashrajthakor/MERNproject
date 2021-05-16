@@ -42,4 +42,6 @@ npm i jsonwebtoken
 * npm i bootstrap
 * npm i react-router-dom
 * useState
-
+## Connect React with NodeJS & MongoDB | Stored Registration Form Data in Database in MERN
+degrade mongoose version to resolved proxy error ; 
+set proxy on package.json
