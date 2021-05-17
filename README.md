@@ -4,6 +4,15 @@
 * R : ReactJs
 * N : NodeJs
 
+| Server side packages     | Client side packages  |
+| ----------- | ----------- |
+| npm i mongoose      | npm i bootstrap       |
+| npm i bcrypt.js   | npm i react-router-dom        |
+| npm i jsonwebtoken   | npm i react-scripts        |
+| npm i dotenv |   |
+| npm i express |  |
+
+
 ## Server side coding:
 Starting with NodeJS , framework is ExpressJS.
 * Routing
