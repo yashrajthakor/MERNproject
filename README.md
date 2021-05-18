@@ -56,3 +56,4 @@ degrade mongoose version to resolved proxy error ;
 set proxy on package.json
 
 * Implement Login System with JWT & Stored Cookie 
+* User Authentication (using middleware)
