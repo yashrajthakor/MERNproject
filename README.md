@@ -54,3 +54,5 @@ npm i jsonwebtoken
 ## Connect React with NodeJS & MongoDB | Stored Registration Form Data in Database in MERN
 degrade mongoose version to resolved proxy error ; 
 set proxy on package.json
+
+* Implement Login System with JWT & Stored Cookie 
