@@ -79,12 +79,12 @@ router.post('/signin',async(req, res)=>{
 
  
             if(!isMatch){
-                return res.status(422).json({error:"Invalid credentials"});
+                return res.status(400).json({error:"Invalid credentials"});
             }
               res.status(201).json({message: "user signin successfully"});
             
         }else{
-            return res.status(422).json({error:"Invalid credentials"});
+            return res.status(400).json({error:"Invalid credentials"});
             
         } 
         
