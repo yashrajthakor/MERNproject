@@ -96,8 +96,8 @@ router.post('/signin',async(req, res)=>{
 });
 
 //about us
-router.get('/about', authenticate,(req, res)=>{
+router.get('/about',authenticate,(req, res)=>{
     console.log(`hello my aboutus`);
-    res.send(`Hello about,world from the server`)
+    res.send(req.rootUser);
 })
 module.exports = router; 
