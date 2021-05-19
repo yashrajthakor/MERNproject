@@ -11,6 +11,7 @@
 | npm i jsonwebtoken   | npm i react-scripts        |
 | npm i dotenv |   |
 | npm i express |  |
+| npm i cookie-parser |  |
 
 
 ## Server side coding:
@@ -57,3 +58,4 @@ set proxy on package.json
 
 * Implement Login System with JWT & Stored Cookie 
 * User Authentication (using middleware)
+* npm i cookie-parser ( about page authentication)
