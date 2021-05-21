@@ -3,8 +3,7 @@ import React,{useEffect, useState} from 'react';
 const Contact = () => {
     const [userData, setUserData] = useState({name:"", email:"",phone:"",message:"" });
 
-    const  userContact =async ()=>{
-        
+    const  userContact =async ()=>{        
         try{
             const res = await fetch('/getdata', {
                 method:'GET',
@@ -33,8 +32,26 @@ const Contact = () => {
         setUserData({...userData, [name]: value})
     }
    
-    const contactForm =(e)=>{
+    const contactForm =async(e)=>{
         e.preventDefault();
+        const {name, email, phone, message} =userData;
+        const res = await fetch('/contact',{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                name, email, phone, message
+            })
+        });
+
+        const data = await res.json();
+        if(!data){
+            console.log("message not send");
+        }else{
+            alert("Message sent");
+            setUserData({...userData, message:""})
+        }
     }
     return (
         <>
@@ -103,7 +120,7 @@ const Contact = () => {
                     rows="9"></textarea>
                 </div>
                 
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={contactForm}>Submit</button>
             
                 </form>
             </div>
