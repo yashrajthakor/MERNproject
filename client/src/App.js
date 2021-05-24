@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Signup from './components/Signup';
 import ErrorPage from './components/ErrorPage';
 import 'bootstrap/dist/css/bootstrap.css';
+import Logout from './components/Logout';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
    <Route path="/login"> <Login/> </Route>
 
    <Route path="/signup"><Signup/> </Route>
+   <Route path="/logout"><Logout/> </Route>
    
    <Route><ErrorPage/> </Route>
    </Switch>
